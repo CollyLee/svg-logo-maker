@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const 
+const shapes = require('/./lib/shapes')
 
 const questions = [
     {
@@ -35,8 +35,8 @@ const questions = [
 
 const init = function () {
     inquirer.prompt(questions)
-        .then(data) =>
-createFile(data)
+//         .then(data) =>
+// createFile(data)
 
 }
 
