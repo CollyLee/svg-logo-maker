@@ -40,8 +40,9 @@ const init = () => {
 const createLogo = (data) => {
     // console.log(data);
     const shapeOutput = createShape(data);
+    console.log(shapeOutput)
     
-    fs.writeFile('logo.svg', shapeOutput, (err) => 
+    fs.writeFile('logo.svg', String(shapeOutput), (err) => 
         err ? console.error(err) : console.log('Your logo is ready! Check the root folder for the new file.'))
 }
 
