@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const shapes = require('/./lib/shapes')
+const createShape = require('./lib/shapes')
 
 const questions = [
     {
@@ -17,7 +17,7 @@ const questions = [
         type: 'list',
         message: `Choose the shape you'd like for your logo.`,
         name: 'logoShape',
-        choices: [`Circle`, `Triangle`, `Square`]
+        choices: [`circle`, `triangle`, `square`]
     },
     {
         type: 'input',
@@ -26,18 +26,14 @@ const questions = [
     },
 ]
 
-// const createLogo(data) {
-    // create a variable that is the data from the generate logo file (logoData(data))
-    // fs.writeFile('logo.svg', logoData, (err) => 
-    // err? console.error(err) " console.log('Your logo is ready! Check the root folder for the new file.")
-//     )
-// }
+const createLogo = function(parameters) {
+    const shapeOutput = createShape(parameters)
+    fs.writeFile('logo.svg', shapeOutput, (err) => err ? console.error(err) : console.log('Your logo is ready! Check the root folder for the new file.'))
+}
 
 const init = function () {
     inquirer.prompt(questions)
-//         .then(data) =>
-// createFile(data)
-
+        .then((responses) => createLogo(responses))
 }
 
 init()
