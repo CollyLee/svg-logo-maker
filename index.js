@@ -1,13 +1,17 @@
+// GLOBAL VARIABLES/REQUIRES
 const fs = require('fs');
 const inquirer = require('inquirer');
-// const createShape = require('./lib/shapes')
 const createShape = require('./lib/createShape')
+const maxLengthPrompt = require('inquirer-maxlength-input-prompt')
+inquirer.registerPrompt('maxlength-input', maxLengthPrompt)
 
+// INQUIRER PROMPTS
 const questions = [
     {
-        type: 'input',
-        message: `Enter the text you'd like on your logo (three chars max).`,
+        type: 'maxlength-input',
+        message: "Enter the text you'd like on your logo (three chars max).",
         name: 'logoChars',
+        maxLength: 3
     },
     {
         type: 'input',
@@ -16,7 +20,7 @@ const questions = [
     },
     {
         type: 'list',
-        message: `Choose the shape you'd like for your logo.`,
+        message: "Choose the shape you'd like for your logo.",
         name: 'logoShape',
         choices: [`Circle`, `Triangle`, `Square`]
     },
@@ -24,6 +28,11 @@ const questions = [
         type: 'input',
         message: 'Enter a color of the shape (name or hex number).',
         name: 'shapeColor',
+    },
+    {
+        type: 'input',
+        message: "Enter a color of the shape's border (name or hex number).",
+        name: 'shapeBorder',
     },
 ]
 
