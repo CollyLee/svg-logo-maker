@@ -34,6 +34,7 @@ const createLogo = function(parameters) {
 const init = function () {
     inquirer.prompt(questions)
         .then((responses) => createLogo(responses))
+        console.log(responses);
 }
 
 init()
