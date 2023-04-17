@@ -36,14 +36,12 @@ const questions = [
     },
 ]
 
-
 // FUNCTION THAT GATHERS USER RESPONSE AND SENDS TO CREATELOGO
 const init = () => {
     inquirer.prompt(questions)
     // .then((data) => console.log(data))
         .then((data) => createLogo(data))
 }
-
 
 // FUNCTION THAT CALLS THE CREATESHAPE FUNCTION AND WRITES FILE
 const createLogo = (data) => {
@@ -54,6 +52,5 @@ const createLogo = (data) => {
     fs.writeFile('logo.svg', String(shapeOutput), (err) => 
         err ? console.error(err) : console.log('Generated logo.svg: Your logo is ready! Check the root folder for the new file.'))
 }
-
 
 init()

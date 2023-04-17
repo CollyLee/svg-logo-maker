@@ -12,7 +12,7 @@ No installation is required for this application. All you need to run it is to l
 
 ## Usage
 
-A video tutorial of the application can be found [here](INSERT URL HERE)
+A video tutorial of the application can be found [here] <!-- (INSERT URL HERE) -->
 
 Launch index.js using Node. You will immediately be given a series of five prompts asking for the details of your desired logo (text content, text color, shape, shape color, and border color). Only three characters maximum are allowed for the text content.
 
