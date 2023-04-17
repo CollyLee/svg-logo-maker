@@ -52,7 +52,7 @@ const createLogo = (data) => {
     console.log(shapeOutput)
     
     fs.writeFile('logo.svg', String(shapeOutput), (err) => 
-        err ? console.error(err) : console.log('Your logo is ready! Check the root folder for the new file.'))
+        err ? console.error(err) : console.log('Generated logo.svg: Your logo is ready! Check the root folder for the new file.'))
 }
 
 
