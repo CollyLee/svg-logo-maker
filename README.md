@@ -4,7 +4,7 @@
 
 This application allows the user to generate a bare bones logo with no graphics software necessary. By answering five prompts in Node, the user can set the basic parameters for a logo that includes shapes, colors, and text. 
 
-It was also an exercise in test driven development, using Jest as a testing program. If you look at the createShape.test.js file, you can see that the functions of this application are tested to ensure they're functional.
+It was also an exercise in test driven development, using Jest as a testing program. If you look at the createShape.test.js file, you can see that the functions of this application are tested to ensure they're functional. There are 7 tests in total, one testing the text input, three ensuring that all three shape subclasses are properly assigned, and three ensuring that all user inputs (from the questionnaire) are factored into the final product.
 
 ## Installation
 
@@ -12,7 +12,7 @@ No installation is required for this application. All you need to run it is to l
 
 ## Usage
 
-A video tutorial of the application can be found [here] <!-- (INSERT URL HERE) -->
+A video tutorial of the application can be found [here](https://drive.google.com/file/d/1N0cjCAKYTYdLLzGIQLv--AQqxAANQ6xM/view)
 
 Launch index.js using Node. You will immediately be given a series of five prompts asking for the details of your desired logo (text content, text color, shape, shape color, and border color). Only three characters maximum are allowed for the text content.
 
